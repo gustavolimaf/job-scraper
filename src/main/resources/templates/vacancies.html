@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Vagas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Lista de Vagas</h1>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Código</th>
+            <th>Título</th>
+            <th>Link</th>
+            <th>Descrição</th>
+            <th>Data Publicação</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vac : ${vacancies}">
+            <td th:text="${vac.id}"></td>
+            <td th:text="${vac.code}"></td>
+            <td th:text="${vac.title}"></td>
+            <td>
+                <a th:href="${vac.link}" th:text="${vac.link}" target="_blank"></a>
+            </td>
+            <td th:text="${vac.description}"></td>
+            <td th:text="${#dates.format(vac.publicationDate, 'dd/MM/yyyy HH:mm')}"></td>
+            <td>
+                <a th:href="@{'/vacancies/delete/' + ${vac.id}}"
+                   class="btn-delete"
+                   onclick="return confirm('Excluir esta vaga?');">
+                    Excluir
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

@@ -1,0 +1,118 @@
+:root {
+    --color-dark-1: #034159;
+    --color-dark-2: #025951;
+    --color-dark-3: #02735E;
+    --color-dark-4: #038C3E;
+    --color-accent: #0CF25D;
+    --color-white: #ffffff;
+    --color-red: #d20301;
+}
+
+/* -------------------------- */
+/* Reset básico              */
+/* -------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-dark-1);
+    font-family: Arial, sans-serif;
+    color: var(--color-white);
+    padding: 1rem;
+}
+
+/* -------------------------- */
+/* Cabeçalho                 */
+/* -------------------------- */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--color-accent);
+}
+
+/* -------------------------- */
+/* Main / Container principal*/
+/* -------------------------- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-dark-2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* -------------------------- */
+/* Tabela de Vagas           */
+/* -------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: var(--color-dark-3);
+    border-radius: 4px;
+    overflow: hidden; /* Para bordas arredondadas */
+}
+
+table thead {
+    background-color: var(--color-dark-4);
+}
+
+table th,
+table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-dark-2);
+}
+
+table th {
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 0.95rem;
+}
+
+table td {
+    font-size: 0.9rem;
+    color: var(--color-white);
+}
+
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* -------------------------- */
+/* Links e Botões            */
+/* -------------------------- */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+.btn-delete {
+    background-color: transparent;
+    color: var(--color-white);
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    color: var(--color-red);
+    border-color: var(--color-red);
+}
+table tbody tr:hover {
+    background-color: var(--color-dark-4);
+}
