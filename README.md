@@ -4,7 +4,7 @@
 Job Scraper é um sistema desenvolvido em **Java** com **Spring Boot** que busca estágios na área de Informática para ensino superior, filtrando vagas na cidade de **Brasília - DF**. O sistema faz scraping em sites de emprego e exibe as vagas encontradas, permitindo acesso rápido por meio do código da vaga.
 
 ## Tecnologias Utilizadas
-- **Java 17**
+- **Java 21**
 - **Spring Boot** (Web, Data JPA, Scheduler)
 - **Thymeleaf** (para renderização de páginas)
 - **MySQL** (banco de dados)
